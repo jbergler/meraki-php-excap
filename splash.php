@@ -8,7 +8,7 @@
 	$data = array();
 
 	// Location of the splash
-	$rootUrl = "http://" . $_SERVER['SERVER_NAME'] ."/";
+	$data['rootUrl'] = "http://" . $_SERVER['SERVER_NAME'];
 
 	if ($isLoginRequest) {
 		// URLs
@@ -60,7 +60,7 @@
 
 				<input type="text" name="username" class="form-control" placeholder="Username" required autofocus value="<?= $_REQUEST['username'] ?>">
 				<input type="password" name="password" class="form-control" placeholder="Password" required>
-				<input type="hidden" name="success_url" value="<?= $data['rootUrl'] ?>/success.php?continue=<?= urlencode($data['nextUrl']) ?>" />
+				<input type="hidden" name="success_url" value="<?= $data['rootUrl'] ?>/success.php<?php if ($data['nextUrl']) { echo "?continue=" . urlencode($data['nextUrl']); }?>" />
 				<button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
 
 				<br/>
