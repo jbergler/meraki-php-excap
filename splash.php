@@ -1,4 +1,7 @@
 <?php
+	// Location of the splash
+	$url = $_SERVER['SERVER_NAME'];
+
 	// What is the request state?
 	$isLoginRequest = isset($_REQUEST['ap_mac']);
 	$isLoginError = isset($_REQUEST['error_message']);
@@ -40,50 +43,9 @@
 
     <title>Splash Page Test</title>
 
-    <script type="text/javascript" src="jquery-2.1.0.min.js"></script>
-    <link rel="stylesheet" href="bootstrap.min.css">
-    <style>
-        body {
-          padding-top: 40px;
-          padding-bottom: 40px;
-          background-color: #eee;
-        }
-
-        .form-signin {
-          max-width: 380px;
-          padding: 15px;
-          margin: 0 auto;
-        }
-        .form-signin .form-signin-heading,
-        .form-signin .checkbox {
-          margin-bottom: 10px;
-        }
-        .form-signin .checkbox {
-          font-weight: normal;
-        }
-        .form-signin .form-control {
-          position: relative;
-          font-size: 16px;
-          height: auto;
-          padding: 10px;
-          -webkit-box-sizing: border-box;
-             -moz-box-sizing: border-box;
-                  box-sizing: border-box;
-        }
-        .form-signin .form-control:focus {
-          z-index: 2;
-        }
-        .form-signin input[type="text"] {
-          margin-bottom: -1px;
-          border-bottom-left-radius: 0;
-          border-bottom-right-radius: 0;
-        }
-        .form-signin input[type="password"] {
-          margin-bottom: 10px;
-          border-top-left-radius: 0;
-          border-top-right-radius: 0;
-        }
-    </style>
+    <script type="text/javascript" src="assets/jquery-2.1.0.min.js"></script>
+    <link rel="stylesheet" href="assets/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
 <div class="container">
